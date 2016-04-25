@@ -28,3 +28,12 @@ end
 ```
 mix test --only wip
 ```
+
+### Build composable queries with Inquisitor
+Check the [Inquisitor](https://github.com/DockYard/inquisitor) repository if you're looking for building composable queries for Ecto.
+
+### iex shortcuts
+- c "somefile.exs" - compile the file
+- r SomeModule - reload the module
+- h some_func - get help for the function
+- v [n] - access session history
