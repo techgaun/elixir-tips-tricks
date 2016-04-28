@@ -37,3 +37,10 @@ Check the [Inquisitor](https://github.com/DockYard/inquisitor) repository if you
 - r SomeModule - reload the module
 - h some_func - get help for the function
 - v [n] - access session history
+
+### Get query and post params excluding others in params
+
+```
+conn.body_params # gives params from POST
+conn.query_params # query string parameters
+```
