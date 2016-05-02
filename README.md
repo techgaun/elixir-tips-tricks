@@ -38,9 +38,15 @@ Check the [Inquisitor](https://github.com/DockYard/inquisitor) repository if you
 - h some_func - get help for the function
 - v [n] - access session history
 
-### Get query and post params excluding others in params
+### Get query and post params excluding others in params (phoenix)
 
 ```
 conn.body_params # gives params from POST
 conn.query_params # query string parameters
+```
+
+### Run multiple mix tasks
+
+```
+MIX_ENV=test mix do deps.get, test
 ```
