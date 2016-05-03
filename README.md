@@ -50,3 +50,9 @@ conn.query_params # query string parameters
 ```
 MIX_ENV=test mix do deps.get, test
 ```
+
+### Update particular dependency
+
+```
+mix deps.update <dep_name>
+```
