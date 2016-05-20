@@ -61,4 +61,9 @@ mix deps.update <dep_name>
 
 ```
 render conn, "index.html", %{layout: false}
+# with plug
+plug :put_layout, false
+
+# pipe it
+conn |> put_layout(false) |> render(...)
 ```
