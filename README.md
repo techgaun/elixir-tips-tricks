@@ -56,3 +56,9 @@ MIX_ENV=test mix do deps.get, test
 ```
 mix deps.update <dep_name>
 ```
+
+### Turn off layout on Phoenix.Controller.render/3
+
+```
+render conn, "index.html", %{layout: false}
+```
