@@ -67,3 +67,13 @@ plug :put_layout, false
 # pipe it
 conn |> put_layout(false) |> render(...)
 ```
+
+### Increase stacktrace
+
+```
+:erlang.system_flag(:backtrace_depth, 20)
+
+# with phoenix
+# config/env.exs
+config :phoenix, :stacktrace_depth, 20
+```
