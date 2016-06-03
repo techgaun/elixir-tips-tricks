@@ -77,3 +77,16 @@ conn |> put_layout(false) |> render(...)
 # config/env.exs
 config :phoenix, :stacktrace_depth, 20
 ```
+
+### Observer on remote erlang node
+
+```
+$ iex --name phoenix@127.0.0.1 --cookie iam_not_so_awesome -S mix phoenix.server  # in api server
+
+# on separate shell
+$ iex --name test@127.0.0.1 --remsh phoenix@127.0.0.1 --cookie iam_not_so_awesome
+iex(phoenix@127.0.0.1)1> :observer.start
+```
+
+You can pass args down to erlang via `erl` flag.
+Example: `--erl "-kernel inet_dist_listen_min 9001 inet_dist_listen_m 9001"`
