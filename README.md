@@ -90,3 +90,21 @@ iex(phoenix@127.0.0.1)1> :observer.start
 
 You can pass args down to erlang via `erl` flag.
 Example: `--erl "-kernel inet_dist_listen_min 9001 inet_dist_listen_m 9001"`
+
+### Change default compile output directory
+
+
+
+Based on [this](https://github.com/elixir-lang/elixir/blob/4e648199f18ee3be8addab82c951b9e2dd82f885/lib/mix/lib/mix/tasks/new.ex#L286), you can specify a keyword list arg `build_path` to override the default `_build` directory.
+
+Example:
+
+    def project do
+        [app: :my_app,
+        version: "0.0.1",
+        elixir: "~> 1.2",
+        build_embedded: Mix.env == :prod,
+        start_permanent: Mix.env == :prod,
+        build_path: "custom_build_dir",
+        deps: deps]
+    end
