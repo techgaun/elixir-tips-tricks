@@ -93,8 +93,6 @@ Example: `--erl "-kernel inet_dist_listen_min 9001 inet_dist_listen_m 9001"`
 
 ### Change default compile output directory
 
-
-
 Based on [this](https://github.com/elixir-lang/elixir/blob/4e648199f18ee3be8addab82c951b9e2dd82f885/lib/mix/lib/mix/tasks/new.ex#L286), you can specify a keyword list arg `build_path` to override the default `_build` directory.
 
 Example:
@@ -108,3 +106,12 @@ Example:
         build_path: "custom_build_dir",
         deps: deps]
     end
+
+### Emmet tab support for eex in Atom
+
+Open your preferences and select keymaps. It should open keymaps.cson. Add the following in that file:
+
+```coffeescript
+'atom-text-editor[data-grammar="text html elixir"]:not([mini])':
+    'tab': 'emmet:expand-abbreviation-with-tab'
+```
