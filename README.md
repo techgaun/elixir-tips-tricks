@@ -115,3 +115,9 @@ Open your preferences and select keymaps. It should open keymaps.cson. Add the f
 'atom-text-editor[data-grammar="text html elixir"]:not([mini])':
     'tab': 'emmet:expand-abbreviation-with-tab'
 ```
+
+The grammar can be obtained for any files by opening console (ctrl+shift+i) and type the following with the appropriate file open in your editor:
+
+```javascript
+document.getElementsByTagName('atom-text-editor')
+```
